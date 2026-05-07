@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Zhenghao Chen 1ºDAM
+    Documento XML de nómina de trabajador.
+-->
+
+<!DOCTYPE nomina [
+    <!ELEMENT nomina (empresa, trabajador, periodo, conceptos, totales)>
+
+    <!-- Datos de la empresa -->
+    <!ELEMENT empresa (nombre, cif, direccion)>
+
+    <!-- Datos del trabajador con tus datos -->
+    <!ELEMENT trabajador (nombre, dni, nss, categoria, departamento, puesto, fecha_alta)>
+
+    <!-- Período de la nómina -->
+    <!ELEMENT periodo (inicio, fin, dias)>
+
+    <!-- Conceptos de devengos y deducciones -->
+    <!ELEMENT conceptos (concepto+)>
+    <!ELEMENT concepto (descripcion, devengo?, deduccion?)>
+    <!ATTLIST concepto tipo (devengo | deduccion) #REQUIRED>
+
+    <!-- Totales -->
+    <!ELEMENT totales (total_devengado, total_deducido, salario_neto)>
+]>
+
+<nomina>
+    <empresa>
+        <nombre>Tech Solutions S.L.</nombre>
+        <cif>B12345678</cif>
+        <direccion>Calle Innovación 42, Madrid</direccion>
+    </empresa>
+    <trabajador>
+        <nombre>Zhenghao Chen</nombre>
+        <dni>X2495631T</dni>
+        <nss>29 987654 03</nss>
+        <categoria>Programador Junior</categoria>
+        <departamento>Desarrollo de Software</departamento>
+        <puesto>Desarrollador Web en Prácticas</puesto>
+        <fecha_alta>2024-10-01</fecha_alta>
+    </trabajador>
+    <!-- Período de la nómina -->
+    <periodo>
+        <inicio>2025-01-01</inicio>
+        <fin>2025-01-31</fin>
+        <dias>31</dias>
+    </periodo>
+    <!-- Conceptos de devengos y deducciones -->
+    <conceptos>
+        <!-- Devengos -->
+        <concepto tipo="devengo">
+            <descripcion>Salario Base</descripcion>
+            <devengo>1200.00</devengo>
+        </concepto>
+
+        <concepto tipo="devengo">
+            <descripcion>Complemento Transporte</descripcion>
+            <devengo>150.00</devengo>
+        </concepto>
+
+        <concepto tipo="devengo">
+            <descripcion>Paga Extra Prorrateada</descripcion>
+            <devengo>100.00</devengo>
+        </concepto>
+
+        <concepto tipo="devengo">
+            <descripcion>Plus de Productividad</descripcion>
+            <devengo>200.00</devengo>
+        </concepto>
+
+        <!-- Deducciones -->
+        <concepto tipo="deduccion">
+            <descripcion>IRPF (15%)</descripcion>
+            <deduccion>210.00</deduccion>
+        </concepto>
+
+        <concepto tipo="deduccion">
+            <descripcion>Seguridad Social (6.35%)</descripcion>
+            <deduccion>100.00</deduccion>
+        </concepto>
+
+        <concepto tipo="deduccion">
+            <descripcion>Desempleo (1.55%)</descripcion>
+            <deduccion>20.00</deduccion>
+        </concepto>
+
+        <concepto tipo="deduccion">
+            <descripcion>Formación Profesional (0.1%)</descripcion>
+            <deduccion>10.00</deduccion>
+        </concepto>
+
+    </conceptos>
+    <!-- Totales finales -->
+    <totales>
+        <total_devengado>1650.00</total_devengado>
+        <total_deducido>340.00</total_deducido>
+        <salario_neto>1310.00</salario_neto>
+    </totales>
+
+</nomina>

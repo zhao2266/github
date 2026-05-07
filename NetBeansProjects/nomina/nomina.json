@@ -1,0 +1,36 @@
+{
+  "empresa": {
+    "nombre": "Tech Solutions S.L.",
+    "cif": "B12345678",
+    "direccion": "Calle Innovación 42, Madrid"
+  },
+  "trabajador": {
+    "nombre": "Zhenghao Chen",
+    "dni": "X2495631T",
+    "nss": "29 987654 03",
+    "categoria": "Programador Junior",
+    "departamento": "Desarrollo de Software",
+    "puesto": "Desarrollador Web en Prácticas",
+    "fecha_alta": "2024-10-01"
+  },
+  "periodo": {
+    "inicio": "2025-01-01",
+    "fin": "2025-01-31",
+    "dias": 31
+  },
+  "conceptos": [
+    { "tipo": "devengo", "descripcion": "Salario Base", "importe": 1200.00 },
+    { "tipo": "devengo", "descripcion": "Complemento Transporte", "importe": 150.00 },
+    { "tipo": "devengo", "descripcion": "Paga Extra Prorrateada", "importe": 100.00 },
+    { "tipo": "devengo", "descripcion": "Plus de Productividad", "importe": 200.00 },
+    { "tipo": "deduccion", "descripcion": "IRPF (15%)", "importe": 210.00 },
+    { "tipo": "deduccion", "descripcion": "Seguridad Social (6.35%)", "importe": 100.00 },
+    { "tipo": "deduccion", "descripcion": "Desempleo (1.55%)", "importe": 20.00 },
+    { "tipo": "deduccion", "descripcion": "Formación Profesional (0.1%)", "importe": 10.00 }
+  ],
+  "totales": {
+    "total_devengado": 1650.00,
+    "total_deducido": 340.00,
+    "salario_neto": 1310.00
+  }
+}
